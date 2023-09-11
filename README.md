@@ -15,6 +15,8 @@ Takes either a single centrifuge output file (*centrifugeReport.txt) or a direct
 3.    centrifugeReport.txt: used by the programme to identify the correct files within the given directory
 4.    underscores ('_') must be used between file name elements as these are used for splitting file names
 
+**output format** can be either 'pdf' or 'png'.
+
 An example output can be seen below:
 <img src="https://github.com/DrATedder/cent_2_pie/blob/4d1450706915204e24590eb9e8ecd979e283d664/ERR9638259_fastp_trimmed_decon_centrifugeReport_chart.png" width=80% height=80%>
 
