@@ -6,9 +6,9 @@ def cumulative_reads(cent_out):
     cumulative_genus = {}
     for line in cent_out:
         if not line.startswith("name"):
-            if "species" in line or "genus" in line:
+            if "species" in line or "genus" in line or "leaf" in line:
                 parts = line.split("\t")
-                genus, uniqR = parts[0].split()[0], parts[5]
+                genus, uniqR = parts[0].split()[0], parts[4]
                 cumulative_genus.setdefault(genus, []).append(int(uniqR))
     return cumulative_genus
 
@@ -34,16 +34,17 @@ def process_file(input_file):
         print("Results written to", output_file)
 
 def main(input_dir, abundance_threshold):
-    for input_file in glob.glob(os.path.join(input_dir, '*.txt')):
+    for input_file in glob.glob(os.path.join(input_dir, '*centrifugeReport.txt')):
         process_file(input_file)
 
 if __name__ == "__main__":
     if len(sys.argv) != 3:
-        print("Usage: python script_name.py input_directory abundance_threshold")
+        print("Usage: python genus_level_read_count_abundance.py input_directory abundance_threshold")
         sys.exit(1)
     input_dir = sys.argv[1]
     abundance_threshold = sys.argv[2]
     main(input_dir, abundance_threshold)
+
 
 
 
