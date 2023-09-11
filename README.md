@@ -10,7 +10,7 @@ Takes either a single centrifuge output file (*centrifugeReport.txt) or a direct
 **Note**. Centrifuge output files should be named in the following manner:
 > shortname_anything_centrifugeReport.txt
 
-1.    shortname: used to label samples in the PCA plot; should also be used in metadata file
+1.    shortname: used to label the pie chart
 2.    anything: not used, but can be anything
 3.    centrifugeReport.txt: used by the programme to identify the correct files within the given directory
 4.    underscores ('_') must be used between file name elements as these are used for splitting file names
