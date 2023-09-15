@@ -44,6 +44,8 @@ def create_env_list(env_sample, tax_level):
         return read_genus_or_below_list(env_sample)
     elif tax_level == "species":
         return read_species_list(env_sample)
+    else:
+        raise ValueError("Invalid tax_level. Accepted values are 'total', 'genus', or 'species'.")
 
 def decontaminate(samples_path, env_sample_path, tax_level):
     with open(env_sample_path, "r") as env_sample_file:
@@ -69,6 +71,10 @@ def main():
     metadata_file = sys.argv[3]
     tax_level = sys.argv[4]
 
+    if tax_level not in ["total", "genus", "species"]:
+        print("Error: Invalid tax_level. Accepted values are 'total', 'genus', or 'species'.")
+        sys.exit(1)
+
     sample_dict = {}
     bone_dict = {}
 
@@ -87,3 +93,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
