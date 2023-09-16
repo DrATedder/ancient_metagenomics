@@ -5,7 +5,7 @@ A set of python scripts intended to help in the analysis of ancient metagenomic 
 ## 1. centrifuge_env_decontam.py
 Decontamination of ancient DNA (aDNA) samples (or indeed, any metagenomic samples) is really important. If you have access to either a sequenced 'lab blank' and/or an environmental sample (for example a bone sample from the same burial site if you are working on ancient oral microbiomes), you will be able to taxonomically identify OTUs which may otherwise be erroneously attributed to your aDNA sample.
 
-**Prerequisites:** All samples ('real' and 'blanks') should have been run through centrifuge to produce 'centrifugeReport.txt' files.
+**Prerequisites:** All samples ('real' and 'contaminants') should have been run through centrifuge to produce 'centrifugeReport.txt' files.
 
 **Requirements:**
 1.  directory containing sample files (*centrifugeReport.txt format; see below for naming protocols)
@@ -23,7 +23,7 @@ Decontamination of ancient DNA (aDNA) samples (or indeed, any metagenomic sample
 3.    centrifugeReport.txt: used by the programme to identify the correct files within the given directory
 4.    underscores ('_') must be used between file name elements as these are used for splitting file names
 
-**Metadata format:** Metadata should be in two column CSV format as shown below (example can be downloaded here). The first column should contain the sequence 'shortname' for each file you want to process, and the second column should contain the sequence 'shortname' for the contaminant file. **Note.** If either file (sample or contaminent) is in the metadata but not in the directories given, they will be ignored. 
+**Metadata format:** Metadata should be in two column CSV format as shown below (example can be downloaded [here](https://github.com/DrATedder/ancient_metagenomics/blob/42e6d56453cc1c63e0ee8885aeb0acfc4acc42d1/decontamination_metadata_example.csv "Decontaminant metadata example file")). The first column should contain the sequence 'shortname' for each file you want to process, and the second column should contain the sequence 'shortname' for the contaminant file. **Note.** If either file (sample or contaminent) is in the metadata but not in the directories given, they will be ignored. 
 
 |sample|contaminent|
 |---|---|
