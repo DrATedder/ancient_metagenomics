@@ -157,3 +157,7 @@ The metadata file should be in two column CSV format (example given below) with 
 ### Example output file
 
 ![Screenshot](https://github.com/DrATedder/ancient_metagenomics/blob/7117d164fc22972f9c8b69248cda3df922bd3d05/3D_PCA_plot_example.png "Example 3D PCA")
+
+### Java App
+
+A Java GUI version of this script is available [here](https://github.com/DrATedder/abundance_2_PCA "Link to abundance_2_PCA Java App")
