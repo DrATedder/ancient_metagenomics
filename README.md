@@ -92,6 +92,8 @@ Takes a directory containing centrifuge output files (*centrifugeReport.txt; min
 
 **Threshold** can be any integer/float below 100, and output files are written into the directory containing input files. Please be aware that the threshold chosen isn't incorporated into the output file name, so you run the risk of overwriting previous abundance files if you run the script multiple times with different thresholds.
 
+A Java-based GUI version of this script is available [here](https://github.com/DrATedder/centriguge_2_abundance/tree/main "Link to centrifuge_2_abundance App").
+
 ## 4. abundance_PCA_3D_variance.py
 
 This script will take the abundance files generated in step 3 (above), and create either a 2D or a 3D PCA plot.
