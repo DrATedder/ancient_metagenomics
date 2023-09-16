@@ -44,6 +44,8 @@ Decontamination of ancient DNA (aDNA) samples (or indeed, any metagenomic sample
 **Output files:** Output file, still in 'centrifugeReport.txt' format will be output into the directory containing the samples. File names will have been appended in the following way:
 > shortname_anything_<tax_level>_decontam_centrifugeReoprt.txt
 
+A Java GUI version of this script can be found [here](https://github.com/DrATedder/centrifuge_decontamination "centrifuge_decontamination Java App").
+
 ## 2. cent_out_2_pie_chart.py
 Takes either a single centrifuge output file (*centrifugeReport.txt) or a directory containing centrifuge output files (txt; minimum 1) from a standard metagenomic OTU identification analysis and produces a pie chart (or charts) which shows the proportion of OTUs at each taxRank (i.e. 'kingdom', 'family', 'genera', 'species' etc...).
 
