@@ -94,3 +94,66 @@ Takes a directory containing centrifuge output files (*centrifugeReport.txt; min
 
 ## 4. abundance_PCA_3D_variance.py
 
+This script will take the abundance files generated in step 3 (above), and create either a 2D or a 3D PCA plot.
+
+### Usage
+```bash
+   python abundance_PCA_3D_variance.py input directory output directory [metadata] [PCA type] [show_variance]
+```
+
+1. input data files and meta data should take the same form as shown above.
+2. PCA type should be either '2D' or '3D'.
+3. if 'show_variance' is absent, variance will not be shown.
+
+## Example input files
+### Abundance files
+Input files (minimum 2) containing abundance data should be in three column CSV file format (example format shown below) with a 'txt' extension. The columns represent 'species', 'read count' and 'abundance'. No column headers are permitted.
+An example input file (ERR9638312_fastp_trimmed_decon_centrifugeReport_abundance.txt) can be found [here](../blob/8a56fd9c63c5e9359ce89a43b8392921ac85cd3c/ERR9638312_fastp_trimmed_decon_centrifugeReport_abundance.txt "Example Input Data").
+
+**Note.** Input files can be generated from centrifugeReport.txt file using step 3 above.
+
+All files should be named in the following way: 
+> shortname_anything_abundance.txt
+
+1. **shortname**: used to label samples in the PCA plot; should also be used in metadata file
+2. **anything**: not used, but can be anything
+3. **abundance.txt**: used by the programme to identify the correct files within the given directory
+4. **underscores** ('_') must be used between file name elements as these are used for splitting file names
+
+
+|     |     |     |
+| --- | --- | --- |
+|Azorhizobium caulinodans | 1725 | 0.03|
+|Cellulomonas gilvus | 2019 | 0.03|
+|Myxococcus xanthus | 5519 | 0.08|
+|Myxococcus macrosporus | 4463 | 0.07|
+|Stigmatella aurantiaca | 1622 | 0.02|
+|Cystobacter fuscus | 2504 | 0.04|
+|Archangium gephyra | 3011 | 0.04|
+|Chondromyces crocatus | 1719 | 0.03|
+|Sorangium cellulosum | 16403 | 0.24|
+|Vitreoscilla filiformis | 1746 | 0.03|
+|Lysobacter enzymogenes | 44962 | 0.66|
+|Stella humosa | 2887 | 0.04| 
+
+### Metadata file
+The metadata file should be in two column CSV format (example given below) with a 'csv' extension. Column headers should be present, and should be 'sample_name' and 'grouping'. The actual data you use to group samples can take any format you desire.
+
+**Note.** The data in the column 'sample_name' should correspond to the **shortname** used for each of the abundance input files. If these don't match, the PCA plot will be generated without grouping the data.
+
+| sample_name | grouping |
+| --- | --- |
+| ERR1329824 | 25 |
+| ERR1329825 | 25 |
+| ERR1329826 | 25 |
+| ERR1329827 | 25 |
+| ERR1329828 | 25 |
+| ERR1329829 | ancient |
+| ERR1329830 | ancient |
+| ERR1329831 | word_99 |
+| ERR1329832 | word_99 |
+| ERR1329833 | word_99 |
+
+### Example output file
+
+![Screenshot](https://github.com/DrATedder/ancient_metagenomics/blob/7117d164fc22972f9c8b69248cda3df922bd3d05/3D_PCA_plot_example.png "Example 3D PCA")
