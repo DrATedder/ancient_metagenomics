@@ -63,7 +63,7 @@ def decontaminate(samples_path, env_sample_path, tax_level):
 
 def main():
     if len(sys.argv) != 5:
-        print("Usage: python script.py <samples_folder> <bone_folder> <metadata_file> <tax_level>")
+        print("Usage: python script.py <samples_folder> <contaminant_folder> <metadata_file> <tax_level>")
         sys.exit(1)
 
     samples_folder = sys.argv[1]
@@ -78,10 +78,10 @@ def main():
     sample_dict = {}
     bone_dict = {}
 
-    for file in glob.glob(os.path.join(samples_folder, "*decon_centrifugeReport.txt")):
+    for file in glob.glob(os.path.join(samples_folder, "*centrifugeReport.txt")):
         sample_dict[os.path.basename(file).split("_")[0]] = file
 
-    for file in glob.glob(os.path.join(bone_folder, "*decon_centrifugeReport.txt")):
+    for file in glob.glob(os.path.join(bone_folder, "*centrifugeReport.txt")):
         bone_dict[os.path.basename(file).split("_")[0]] = file
 
     with open(metadata_file, "r") as meta_in:
