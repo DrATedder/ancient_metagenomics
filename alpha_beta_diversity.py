@@ -17,7 +17,7 @@ def calculate_alpha_diversity(input_dir, output_file):
         sample_name = os.path.basename(file).split("_")[0]
 
         # Read the abundance file into a DataFrame (assuming no header)
-        df = pd.read_csv(file, header=None, names=["species", "count", "abundance"], delim_whitespace=True)
+        df = pd.read_csv(file, header=None, names=["species", "count", "abundance"], sep=',')
 
         # Calculate alpha diversity using Shannon index
         counts = df["count"]
