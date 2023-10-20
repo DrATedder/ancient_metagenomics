@@ -88,9 +88,11 @@ Takes a directory containing centrifuge output files (*centrifugeReport.txt; min
 
 **Note**. Column headers are for illustrative purposes only. Abundance files are output without headers.
 
-**Basic usage:** `python cent_out_2_pie_chart.py /path/to/directory/containing/centrifuge_outputs/ [threshold]`
+**Basic usage:** `python cent_out_2_pie_chart.py /path/to/directory/containing/centrifuge_outputs/ [threshold] [level]`
 
 **Threshold** can be any integer/float below 100, and output files are written into the directory containing input files. Please be aware that the threshold chosen isn't incorporated into the output file name, so you run the risk of overwriting previous abundance files if you run the script multiple times with different thresholds.
+
+**Level** can be either 'species' or 'genus'. Output file will reflect these taxonomic classifications.
 
 A Java-based GUI version of this script is available [here](https://github.com/DrATedder/centrifuge_2_abundance/tree/main "Link to centrifuge_2_abundance App").
 
