@@ -74,10 +74,10 @@ A Java GUI version of this script can be found [here](https://github.com/DrATedd
 
 ## 3. genus_level_read_count_abundance.py
 
-Takes a directory containing centrifuge output files (*centrifugeReport.txt; minimum 1) from a standard metagenomic OTU identification analysis and a user defined abundance threshold and produces a comma separated txt file containing 'genera' and 'species' (combined 'species' and 'leaf' OTUs) with read count abundance greater than the threshold specified, 'number of unique reads' and 'abundance' (example output below).
+Takes a directory containing centrifuge output files (*centrifugeReport.txt; minimum 1) from a standard metagenomic OTU identification analysis and a user defined abundance threshold and produces a comma separated txt file containing either 'genera' (combined 'genus', 'species', 'subspecies' and 'leaf OTUs)) or 'species' (combined 'species', 'subspecies' and 'leaf' OTUs) with read count abundance greater than the threshold specified, 'number of unique reads' and 'abundance' (example output below).
 <details><summary>See more</summary>
 
-### Example output file ###
+## Example output file ##
 
 |  OTU   |  UniqR   | Abundance   |
 | --- | --- | --- |
@@ -110,7 +110,7 @@ A Java-based GUI version of this script is available [here](https://github.com/D
 This script will take the abundance files generated in step 3 (above), and create either a 2D or a 3D PCA plot.
 <details><summary>See more</summary>
 
-### Usage
+## Usage
 ```bash
    python abundance_PCA_3D_variance.py input directory output directory [metadata] [PCA type] [show_variance]
 ```
@@ -178,8 +178,25 @@ A Java GUI version of this script is available [here](https://github.com/DrATedd
 </details>
 
 ## 5. alpha_beta_diversity.py
+
+Takes a directory containg abundance files (created in step 3) and calculates [alpha](https://en.wikipedia.org/wiki/Alpha_diversity "Link to Alpha Diversity page on Wikipedia") and [beta](https://en.wikipedia.org/wiki/Beta_diversity "Link to Beta Diversity page on Wikipedia") diversity indices.
 <details><summary>See more</summary>
-some stuff
+
+### Usage
+```bash
+   python alpha_beta_diversity.py input_directory
+```
+
+### Output files
+The script generates three output files:
+- alpha_diversity_results.csv: A two column file with samples and their associated alpha diversity. **Note.** each file will be named in the file with it's **shortname** as in previous steps.
+- beta_diversity_matrix.csv: A pairwise comparison of individuals based on beta diversity.
+- count_matrix.csv: A count matirx for each OTU per sample.
+
+### Java App
+
+A Java GUI version of this script is available here.
+
 </details>
 
 ## 6. diversity_box_plot.py
