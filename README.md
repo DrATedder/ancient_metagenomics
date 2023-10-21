@@ -195,7 +195,7 @@ The script generates three output files:
 
 ### Java App
 
-A Java GUI version of this script is available here.
+A Java GUI version of this script is available [here](https://github.com/DrATedder/Calculate_Metagenomic_Diversity "Link to 'Calculate_Metagenomic_Diversity' App").
 
 </details>
 
