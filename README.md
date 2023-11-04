@@ -206,7 +206,7 @@ some stuff
 
 ## 7. abundance_2_centrifuge.py
 
-We can do a lot with the `abundance` files we create with the scripts in these steps, but some analyses simply require a more standard format (for example [pavian]()https://github.com/fbreitwieser/pavian or [QIIME](http://qiime.org/) etc). In these cases, it may be useful to convert your `abundance` file, back into a `centrifugeReport` to ensure you can then access other available tools.
+We can do a lot with the `abundance` files we create with the scripts in these steps, but some analyses simply require a more standard format (for example [pavian](https://github.com/fbreitwieser/pavian) or [QIIME](http://qiime.org/) etc). In these cases, it may be useful to convert your `abundance` file, back into a `centrifugeReport` to ensure you can then access other available tools.
 
 <details><summary>See more</summary>
    
