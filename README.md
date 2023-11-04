@@ -179,7 +179,7 @@ A Java GUI version of this script is available [here](https://github.com/DrATedd
 
 ## 5. alpha_beta_diversity.py
 
-Takes a directory containg abundance files (created in step 3) and calculates [alpha](https://en.wikipedia.org/wiki/Alpha_diversity "Link to Alpha Diversity page on Wikipedia") and [beta](https://en.wikipedia.org/wiki/Beta_diversity "Link to Beta Diversity page on Wikipedia") diversity indices.
+Takes a directory containing abundance files (created in step 3) and calculates [alpha](https://en.wikipedia.org/wiki/Alpha_diversity "Link to Alpha Diversity page on Wikipedia") and [beta](https://en.wikipedia.org/wiki/Beta_diversity "Link to Beta Diversity page on Wikipedia") diversity indices.
 <details><summary>See more</summary>
 
 ### Usage
@@ -202,4 +202,23 @@ A Java GUI version of this script is available [here](https://github.com/DrATedd
 ## 6. diversity_box_plot.py
 <details><summary>See more</summary>
 some stuff
+</details>
+
+## 7. abundance_2_centrifuge.py
+
+We can do a lot with the `abundance` files we create with the scripts in these steps, but some analyses simply require a more standard format (for example [pavian]()https://github.com/fbreitwieser/pavian or [QIIME](http://qiime.org/) etc). In these cases, it may be useful to convert your `abundance` file, back into a `centrifugeReport` to ensure you can then access other available tools.
+
+<details><summary>See more</summary>
+   
+**Requirements:**
+- an `abundance` file
+- the original `centrifugeReport` that made the centrifuge file
+- the taxonomic level used to create your `abundance` files (either `species`, `genus`, or `total`)
+
+**Note.** both of these file types, for all of the files you intend to convert, should be in the **same** directory.
+
+**Usage:**
+```bash
+python /path/to/abundance_2_centrifuge.py </path/to/directory> <otu_level>
+```
 </details>
